@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="body">
+    <header class="logo">
+        <div>
+            <img src="./image/medilife.svg" alt="logoMedilife">
+        </div>
+    </header>
+    <div>
+        <p class="textoEncuesta">Califique del 1 al 5, su satisfaccion sobre la atencion recibida
+            por parte del
+            Representante de Servicio al
+            Cliente que atendio su consulta o gestion.</p>
+    </div>
+    <form class="form" action="envio.php">
+        <div class="opciones">
+            <input type="radio" id="1" value="1" name="opcion">
+            <label for="opcion1">1</label>
+            <br>
+            <input type="radio" id="2" value="2" name="opcion">
+            <label for="opcion2">2</label>
+            <br>
+            <input type="radio" id="3" value="3" name="opcion">
+            <label for="opcion3">3</label>
+            <br>
+            <input type="radio" id="4" value="4" name="opcion">
+            <label for="opcion4">4</label>
+            <br>
+            <input type="radio" id="5" value="5" name="opcion">
+            <label for="opcion5">5</label>
+        </div>
+        <div class="button">
+            <div class="empezar">
+                <button onclick="">Volver a empezar</button>
+            </div>
+            <div class="enviar">
+                <button onclick="">Enviar</button>
+            </div>
+        </div>
+
+
+
+    </form>
+</body>
+
+</html>

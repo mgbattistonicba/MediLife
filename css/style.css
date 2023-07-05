@@ -1,0 +1,68 @@
+.body {
+   border: 2px solid rgb(196, 193, 193);
+   margin-left: 30px;
+   margin-right: 30px;
+   margin-bottom: 30px;
+   margin-top: 0;
+}
+
+.logo {
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.textoEncuesta {
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+
+
+.opciones {
+    padding-left: 30px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 5px;
+    padding: initial;
+    border: initial;
+    height: 20px;
+    width: 20px;
+}
+
+.from {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: flex;
+    background: rgb(237, 236, 235);
+    justify-content: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.empezar {
+    margin-left: 30px;
+}
+
+.enviar {
+    padding-left: 120px;
+    margin-left: 30px;
+}
+
+
+
+
