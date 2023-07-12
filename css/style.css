@@ -19,25 +19,19 @@ img {
     
 }
 
-
-
 .textoEncuesta {
     border-top: 2px solid rgb(196, 193, 193);
     font-size: 15px;
     padding-top: 20px;
-    padding-left: 5px;
+    padding-left: 25px;
     padding-right: 30px;
     font-family: sans-serif;
 }
-
-
 
 .col-xs-12 {
     display: block;
     flex-direction: column;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 10px;
     font-size: 14px;
 }
 
@@ -58,6 +52,13 @@ input[type="radio" i] {
     margin-bottom: 30px;
 }
 
+.col-xs-11 {
+    width: 100%;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
 .button {
     display: flex;
     background: rgb(237, 236, 235);
@@ -69,14 +70,15 @@ input[type="radio" i] {
 .empezar {
     margin-left: 13px;
     color: blue;
-    outline: none;
-   
 }
 
 .enviar {
     padding-left: 100px;
     margin-left: 30px;
 }
+
+
+
 
 
 

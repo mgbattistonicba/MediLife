@@ -5,3 +5,4 @@ return Swal.fire({
     showConfirmButton: false,
     timer: 5000
 })
+
