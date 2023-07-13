@@ -51,8 +51,7 @@
         <div class="button">
             <div class="empezar">
                 <button type="button" class="btn btn-link" onclick="limpiarRadioButton()"
-                    style="text-decoration: none; padding-left: 25px;">Volver a
-                    empezar</button>
+                    style="text-decoration: none; padding-left: 25px;">Volver a empezar</button>
             </div>
             <div class="enviar">
                 <button type="button" class="btn btn-success" name="Enviar" id="btn_enviar"
@@ -61,8 +60,20 @@
         </div>
     </form>
     <script>
+
+
         function limpiarRadioButton() {
-            limpiarRadioButton.checked=false;
+            let opcion1 = document.getElementById(1);
+            let opcion2 = document.getElementById(2);
+            let opcion3 = document.getElementById(3);
+            let opcion4 = document.getElementById(4);
+            let opcion5 = document.getElementById(5);
+
+            opcion1.checked = false;
+            opcion2.checked = false;
+            opcion3.checked = false;
+            opcion4.checked = false;
+            opcion5.checked = false;
         }
     </script>
 </body>
