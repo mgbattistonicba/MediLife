@@ -54,7 +54,7 @@ input[type="radio" i] {
 
 .col-xs-11 {
     width: 100%;
-    font-size: 16px;
+    font-size: 13px;
     padding-left: 20px;
     padding-bottom: 10px;
 }
@@ -68,13 +68,11 @@ input[type="radio" i] {
 }
 
 .empezar {
-    margin-left: 13px;
     color: blue;
 }
 
 .enviar {
     padding-left: 100px;
-    margin-left: 30px;
 }
 
 
