@@ -58,8 +58,9 @@
                     style="display: block;border-right-width: 0px;padding-right: 8px;margin-right: 0px; padding-left: 8px;">Enviar</button>
             </div>
         </div>
-        <div id="mensajeResultado"></div>
     </form>
+    <div id="mensajeResultado"></div>
+
     <script>
         function limpiarRadioButton() {
             let opcion1 = document.getElementById(1);
@@ -75,13 +76,36 @@
             opcion5.checked = false;
 
             document.getElementById("btn_enviar").disabled = false;
-
         }
 
         function enviarFormulario() {
             document.getElementById("btn_enviar").disabled = true;
-            mostrarMensajeResultado(`¡Gracias por participar!`);
         }
+
+        // Función para mostrar el mensaje del resultado de la encuesta
+        function mostrarMensajeResultado(resultado) {
+            const mensajeResultadoElement = document.getElementById("mensajeResultado");
+            mensajeResultadoElement.textContent = resultado;
+        }
+
+        // Función para procesar el envío del formulario de la encuesta
+        function enviarEncuesta(event) {
+            event.preventDefault(); // Evitar que el formulario se envíe de forma tradicional
+
+            // Aquí puedes obtener las respuestas del formulario y procesar los resultados
+            // Por ejemplo, podrías calcular el puntaje total, mostrar diferentes mensajes según el resultado, etc.
+
+            // Supongamos que tienes una variable llamada "puntaje" que representa el resultado de la encuesta
+            const puntaje = 8; // Este valor debería ser calculado o determinado según las respuestas
+
+            // Llamar a la función para mostrar el mensaje del resultado
+            mostrarMensajeResultado(`¡Gracias por participar! Tu puntaje es: ${puntaje}`);
+        }
+
+        // Asignar la función enviarEncuesta al evento submit del formulario
+        document.getElementById("encuestaForm").addEventListener("submit", enviarEncuesta);
+
+
 
     </script>
 </body>
