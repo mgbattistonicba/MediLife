@@ -80,23 +80,8 @@
 
         function enviarFormulario() {
             document.getElementById("btn_enviar").disabled = true;
-        }
-
-        // Función para mostrar el mensaje del resultado de la encuesta
-        function mostrarMensajeResultado(resultado) {
-            const mensajeResultadoElement = document.getElementById("mensajeResultado");
-            mensajeResultadoElement.textContent = resultado;
-        }
-
-        // Función para procesar el envío del formulario de la encuesta
-        function enviarEncuesta(event) {
-            event.preventDefault(); 
             mostrarMensajeResultado(`¡Gracias por participar!`);
         }
-
-        // Asignar la función enviarEncuesta al evento submit del formulario
-        document.getElementById("encuestaForm").addEventListener("submit", enviarEncuesta);
-
 
     </script>
 </body>
