@@ -58,11 +58,7 @@
                     style="display: block;border-right-width: 0px;padding-right: 8px;margin-right: 0px; padding-left: 8px;">Enviar</button>
             </div>
         </div>
-        <div id="mensajeAgradecimiento" style="display: none;">
-            <p>¡Gracias por ayudarnos a mejorar!</p>
-        </div>
     </form>
-
 
     <script>
         function limpiarRadioButton() {
@@ -83,19 +79,16 @@
 
         function enviarFormulario() {
             document.getElementById("btn_enviar").disabled = true;
+
+            let boton = document.getElementById("btn_enviar")     
+            boton.addEventListener("click", mostrarMensajeEncuesta)
+
+                function mostrarMensajeEncuesta() {
+                    console.log("Gracias por venir puto")
+                }
+
         }
 
-        document.getElementById("form").addEventListener("submit", function (event) {
-            event.preventDefault(); // Evitar que el formulario se envíe de forma tradicional
-
-            // Aquí puedes agregar la lógica para enviar el formulario utilizando AJAX u otras operaciones
-
-            // Mostrar el mensaje de agradecimiento
-            document.getElementById("mensajeAgradecimiento").style.display = "block";
-
-            // Otra opción es redirigir a una página de agradecimiento después de enviar el formulario
-            // window.location.href = "pagina_de_agradecimiento.html";
-        });
 
 
     </script>
