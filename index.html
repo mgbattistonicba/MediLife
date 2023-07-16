@@ -54,10 +54,11 @@
                     style="text-decoration: none; padding-left: 25px;">Volver a empezar</button>
             </div>
             <div class="enviar">
-                <button type="button" class="btn btn-success" onclick="enviarFormulario" name="enviar" id="btn_enviar"
+                <button type="button" class="btn btn-success" onclick="enviarFormulario()" name="enviar" id="btn_enviar"
                     style="display: block;border-right-width: 0px;padding-right: 8px;margin-right: 0px; padding-left: 8px;">Enviar</button>
             </div>
         </div>
+        <div id="mensajeResultado"></div>
     </form>
     <script>
         function limpiarRadioButton() {
@@ -72,16 +73,29 @@
             opcion3.checked = false;
             opcion4.checked = false;
             opcion5.checked = false;
-        
 
-        
+            document.getElementById("btn_enviar").disabled = false;
+
         }
 
         function enviarFormulario() {
- 
-             // Deshabilitar el botón para evitar envíos múltiples
-            document.getElementById("enviar").disabled = true;
+            document.getElementById("btn_enviar").disabled = true;
         }
+
+        // Función para mostrar el mensaje del resultado de la encuesta
+        function mostrarMensajeResultado(resultado) {
+            const mensajeResultadoElement = document.getElementById("mensajeResultado");
+            mensajeResultadoElement.textContent = resultado;
+        }
+
+        // Función para procesar el envío del formulario de la encuesta
+        function enviarEncuesta(event) {
+            event.preventDefault(); 
+            mostrarMensajeResultado(`¡Gracias por participar!`);
+        }
+
+        // Asignar la función enviarEncuesta al evento submit del formulario
+        document.getElementById("encuestaForm").addEventListener("submit", enviarEncuesta);
 
 
     </script>
