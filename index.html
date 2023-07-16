@@ -54,7 +54,7 @@
                     style="text-decoration: none; padding-left: 25px;">Volver a empezar</button>
             </div>
             <div class="enviar">
-                <button type="button" class="btn btn-success" name="Enviar" id="btn_enviar"
+                <button type="button" class="btn btn-success" onclick="enviarFormulario" name="enviar" id="btn_enviar"
                     style="display: block;border-right-width: 0px;padding-right: 8px;margin-right: 0px; padding-left: 8px;">Enviar</button>
             </div>
         </div>
@@ -73,11 +73,15 @@
             opcion4.checked = false;
             opcion5.checked = false;
         
-            let miButton = document.getElemenById(eliddelboton)
-            miButton.disabled=true;
+
         
         }
 
+        function enviarFormulario() {
+ 
+             // Deshabilitar el botón para evitar envíos múltiples
+            document.getElementById("enviar").disabled = true;
+        }
 
 
     </script>
