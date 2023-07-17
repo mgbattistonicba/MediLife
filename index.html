@@ -81,7 +81,7 @@
 
         function enviarFormulario() {
             document.getElementById("btn_enviar").disabled = true;
-
+            
 
 
             let boton = document.getElementById("btn_enviar")
@@ -91,13 +91,6 @@
                 event.preventDefault();
             }
 
-            function validarFormulario() {
-                const opcionSeleccionada = document.getElementById("opcion").value;
-                if (opcionSeleccionada === "") {
-                    alert("Por favor, seleccione una opción antes de enviar el formulario.");
-                    return;
-                }
-                else{
                 return Swal.fire({
                 position: 'bottom-end',
                 icon: 'success',
@@ -105,10 +98,6 @@
                 showConfirmButton: false,
                 timer: 5000
             })      
-            }}
-
-
-
         }
 
     </script>
