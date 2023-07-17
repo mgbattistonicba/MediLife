@@ -76,28 +76,40 @@
             opcion5.checked = false;
 
             document.getElementById("btn_enviar").disabled = false;
+
         }
 
         function enviarFormulario() {
             document.getElementById("btn_enviar").disabled = true;
 
-            let boton = document.getElementById("btn_enviar")     
+
+
+            let boton = document.getElementById("btn_enviar")
             boton.addEventListener("submit", mostrarMensajeEncuesta)
 
-                function mostrarMensajeEncuesta(event) {
-                    event.preventDefault();
+            function mostrarMensajeEncuesta(event) {
+                event.preventDefault();
+            }
+
+            function validarFormulario() {
+                const opcionSeleccionada = document.getElementById("opcion").value;
+                if (opcionSeleccionada === "") {
+                    alert("Por favor, seleccione una opción antes de enviar el formulario.");
+                    return;
                 }
-
+                else{
                 return Swal.fire({
-                                position: 'bottom-end',
-                                icon: 'success',
-                                title: '¡Gracias por ayudarnos a mejorar!',
-                                showConfirmButton: false,
-                                timer: 5000
-                            })
+                position: 'bottom-end',
+                icon: 'success',
+                title: '¡Gracias por ayudarnos a mejorar!',
+                showConfirmButton: false,
+                timer: 5000
+            })      
+            }}
+
+
+
         }
-
-
 
     </script>
 </body>
