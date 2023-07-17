@@ -26,7 +26,7 @@
             Representante de Servicio al
             Cliente que atendió su consulta o gestión.</p>
     </div>
-    <form class="form" action="envio.php">
+    <form class="form">
         <div class="col-xs-11">
             <div>
                 <input type="radio" id="1" value="1" name="opcion">
@@ -55,7 +55,7 @@
                     style="text-decoration: none; padding-left: 25px;">Volver a empezar</button>
             </div>
             <div class="enviar">
-                <button type="submit" class="btn btn-success" onclick="enviarFormulario()" name="enviar" id="btn_enviar"
+                <button  class="btn btn-success" onclick="enviarFormulario()" name="enviar" id="btn_enviar"
                     style="display: block;border-right-width: 0px;padding-right: 8px;margin-right: 0px; padding-left: 8px;">Enviar</button>
             </div>
         </div>
@@ -77,31 +77,56 @@
 
             document.getElementById("btn_enviar").disabled = false;
 
-            
+
 
         }
 
         function enviarFormulario() {
             document.getElementById("btn_enviar").disabled = true;
+
+
+            const radioButtons = document.getElementsByName("opcion");
+
+            // Recorrer los radio buttons para encontrar el seleccionado
+            let valorSeleccionado = null;
+            for (const radioButton of radioButtons) {
+                if (radioButton.checked) {
+                    valorSeleccionado = radioButton.value;
+                    
+                    break; // Romper el ciclo si ya encontramos el valor seleccionado
+                }
+
+                
+            }
             
+           
 
 
-            let boton = document.getElementById("btn_enviar")
-            boton.addEventListener("submit", mostrarMensajeEncuesta)
-
-            function mostrarMensajeEncuesta(event) {
-                event.preventDefault();
+            if (valorSeleccionado == "" || valorSeleccionado == null) {
+                
+                document.getElementById("btn_enviar").disabled = false;
+                return Swal.fire({
+                    position: 'bottom-end',
+                    icon: 'warning',
+                    title: '¡Debe seleccionar alguna opcion!',
+                    showConfirmButton: false,
+                    timer: 5000
+               
+                })
+   
+            }else {
+                return Swal.fire({
+                    position: 'bottom-end',
+                    icon: 'success',
+                    title: '¡Gracias por ayudarnos a mejorar!',
+                    showConfirmButton: false,
+                    timer: 5000
+                })
             }
 
-                return Swal.fire({
-                position: 'bottom-end',
-                icon: 'success',
-                title: '¡Gracias por ayudarnos a mejorar!',
-                showConfirmButton: false,
-                timer: 5000
-            })      
-        }
 
+           
+        }
     </script>
 </body>
 
